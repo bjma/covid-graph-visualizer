@@ -28,8 +28,7 @@ class UserNode extends Component {
     callAPI = async () => {
         const response = await fetch('http://localhost:5000/');
         const body = await response.json();
-        console.log(body);
-        return body[0];
+        return body;
     }
 
     render() {

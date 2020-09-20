@@ -3,15 +3,11 @@ const mongoose = require("mongoose");
 
 // schema for graph node
 const schema = mongoose.Schema({
-    name: String,
-    uuid: String, 
+    label: String,
     x: Number,
     y: Number,
-    status: {
-        type: String,
-        enum: ["untested", "tested positive", "tested negative", "exposed"],
-    },
-    friends: Array,
+    id: String, 
+    status: Number, // 0 (untested), 1 (tested positive), 2 (negative), 3 (maybe)
 });
 
 // create new mongoose model using schema and export
