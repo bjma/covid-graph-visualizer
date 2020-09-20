@@ -23,6 +23,7 @@ const port = 5000;
 
 // ROUTES
 let nodeRoute = require('./routes/nodeRoute');
+let graphRoute = require('./routes/graphRoute');
 
 // Connect Mongoose to MongoDB
 mongoose.connect(uri, {useNewUrlParser: true});
@@ -33,6 +34,7 @@ connection.once('open', () => console.log('successfully connected to db'));
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/', nodeRoute);
+app.use('/', graphRoute);
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);

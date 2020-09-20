@@ -35,7 +35,7 @@ class UserNode extends Component {
         return (
             <div>
                 <h2>{this.state.label}</h2>
-                <p style={{color: this.state.color}}>id: {this.state.id}</p>
+                <p>id:<span style={{color: this.state.color}}> {this.state.id} </span></p>
             </div>
         )
     }
