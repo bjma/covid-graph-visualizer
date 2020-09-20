@@ -8,8 +8,8 @@ class User extends Component {
         super(props);
         this.state = {
             friends: [],
-            status: 0,
-            id: uuidv4(),
+                status: 0,
+                id: uuidv4(),
         }
     }
 

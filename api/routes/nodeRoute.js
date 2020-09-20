@@ -7,20 +7,20 @@ const Node = require('../models/node.model');
 // Gets data of curr node and returns modified fields as JSON
 router.get('/', async (req, res) => {
     try {
-         const node = await Node.findOne({id : req.body.id});
-         let nodeStatus = node.status;
-         switch (nodeStatus) {
+        const node = await Node.findOne();
+        let nodeStatus = node.status;
+        switch (nodeStatus) {
             // Untested
-             case 0:
-                res.json({
+            case 0:
+               res.json({
                     label: node.label,
                     x: node.x,
                     y: node.y,
                     id: node.id,
                     color: "rgb(198, 196, 192)",
                     size: 0,
-                 });
-                 break;
+                });
+               break;
             // Positive
             case 1:
                 res.json({
@@ -30,20 +30,20 @@ router.get('/', async (req, res) => {
                     id: node.id,
                     color: "rgb(0, 255, 0)",
                     size: 0,
-                 });
-                 break;
+                });
+                break;
             // Negative
             case 2:
-                res.json({
+               res.json({
                     label: node.label,
                     x: node.x,
                     y: node.y,
                     id: node.id,
                     color: "rgb(255, 0, 0)",
                     size: 0,
-                 });
-                 break;
-            case 3:
+                });
+                break;
+           case 3:
                 res.json({
                     label: node.label,
                     x: node.x,
