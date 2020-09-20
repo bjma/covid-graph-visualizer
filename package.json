@@ -17,5 +17,7 @@
     "url": "https://github.com/bjma/covid-graph-visualizer/issues"
   },
   "homepage": "https://github.com/bjma/covid-graph-visualizer#readme",
-  "dependencies": {}
+  "dependencies": {
+    "react-sigma-graph": "0.0.14"
+  }
 }
