@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
-import {v4 as uuidv4} from 'uuid';
 
 class UserNode extends Component {
     // Should take in:
-    // name, uuid, x, y, status, friends
     constructor(props) {
         super(props);
         this.state = {
-            name: props.name,
-            uuid: props.uuid,
-            x: props.x,
-            y: props.y,
-            status: props.status,
-            friends: props.friends,
+            label: "",
+            x: 0,
+            y: 0,
+            id: uuidv4(),
+            color: rgb(0, 0, 0),
+            size: 0,
         }
+    }
+
+    componentDidMount() {
+        
+    }
+
+    callAPI = async () => {
+        const response = await fetch('http://localhost:5000/');
     }
 
     render() {
